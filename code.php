@@ -1,3 +1,26 @@
 <?php
+require_once '1st.php';
 $num = 123;
 echo $num . PHP_EOL;
+$a = 10;
+$a = 20;
+echo $a . PHP_EOL;
+$a = 1 + 2 + 3;
+echo $a . PHP_EOL;
+fatamorgana('Математические операции с переменными в PHP');
+$a = 10;
+$b = 2;
+$c = 10;
+$d = 5;
+$res = $c + $d;
+echo $a + $b . PHP_EOL; echo $a - $b . PHP_EOL; echo $a * $b . PHP_EOL; echo $a / $b . PHP_EOL; echo $res . PHP_EOL;
+$a = 1;
+$b = 2;
+$c = 3;
+echo $a + $b + $c . PHP_EOL;
+$a = 10;
+$b = 5;
+$c = $a - $b;
+$d = 7;
+$res = $c + $d;
+echo $res . PHP_EOL;
