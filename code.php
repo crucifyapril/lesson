@@ -75,3 +75,20 @@ fatamorgana('Сокращенные операции в PHP');
 $num = 47; $num += 7; $num -= 18; $num *= 10; $num /= 15; $str = 'a'; $str .= 'b'; $str .= 'c'; echo $num . $str . PHP_EOL;
 fatamorgana('Операции инкремента и декремента в PHP');
 $num = 10; $num++; $num++; $num--; echo $num . PHP_EOL;
+fatamorgana('Практика на операции в PHP');
+$seconds = 86400 * 365; echo $seconds . PHP_EOL; // сколько секунд в году
+$minutes = 60 * 24 * 365; echo $minutes . PHP_EOL; // сколько минут в году
+fatamorgana('Массивы в PHP');
+$array = [1, 2, 3]; var_dump($array);
+fatamorgana('Как вывести отдельный элемент массива в PHP');
+echo $array[0] . PHP_EOL; echo $array[1] . PHP_EOL; echo $array[2] . PHP_EOL;
+$array = ['a', 'b', 'c', 'd']; echo $array[0] . '+' . $array[1] . '+' . $array[2] . '+' . $array[3] . PHP_EOL;
+$array = [1, 2, 3]; echo $array[0] + $array[1] + $array[2] . PHP_EOL;
+$array = [2, 5, 3, 9]; $res = $array[0] * $array[1] + $array[2] * $array[3]; echo $res . PHP_EOL;
+fatamorgana('Ассоциативные массивы в PHP');
+$array = [1 => 'a', 2 => 'b', 3 => 'c']; echo $array[1]; echo $array[2]; echo $array[3] . PHP_EOL;
+fatamorgana('Хитрость с ключами в PHP');
+$array = [1 => 'Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь']; echo $array[1] . PHP_EOL;
+fatamorgana('Строковые ключи в PHP');
+$user = ['name' => 'Alex', 'lastname' => 'Smith', 'patronymic' => 'Petrov']; echo $user['name'] . ' '; echo $user['lastname'] . ' '; echo $user['patronymic'] . PHP_EOL;
+$date = ['day' => '30' , 'month' => '08' , 'year' => '2024']; echo $date['day'] . '-' . $date['month'] . '-' . $date['year'] . PHP_EOL;
