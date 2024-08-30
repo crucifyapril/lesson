@@ -62,8 +62,8 @@ fatamorgana('Преобразование к строке в PHP');
 $test = 12.345; echo (string)$test . PHP_EOL; var_dump($test); var_dump((string)$test);
 $test = 12345; echo (string)$test . PHP_EOL; var_dump($test); var_dump((string)$test);
 fatamorgana('Получение символов строки на PHP');
-$str = 'abcde'; echo $a[0]; echo $a[2]; echo $a[4] . PHP_EOL;
-$str = 'abcde'; echo $a[4]; echo $a[3]; echo $a[2]; echo $a[1]; echo $a[0] . PHP_EOL;
+$str = 'abcde'; echo $str[0]; echo $str[2]; echo $str[4] . PHP_EOL;
+$str = 'abcde'; echo $str[4]; echo $str[3]; echo $str[2]; echo $str[1]; echo $str[0] . PHP_EOL;
 $str = 'abcde'; $num = $str[0]; echo $num . PHP_EOL;
 fatamorgana('Последний символ строки PHP');
 $str = 'abcde'; $last = strlen($str) - 1; echo $str[$last]. PHP_EOL; $prelast = strlen($str) - 2; echo $str[$prelast]. PHP_EOL;
@@ -91,4 +91,14 @@ fatamorgana('Хитрость с ключами в PHP');
 $array = [1 => 'Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь']; echo $array[1] . PHP_EOL;
 fatamorgana('Строковые ключи в PHP');
 $user = ['name' => 'Alex', 'lastname' => 'Smith', 'patronymic' => 'Petrov']; echo $user['name'] . ' '; echo $user['lastname'] . ' '; echo $user['patronymic'] . PHP_EOL;
-$date = ['day' => '30' , 'month' => '08' , 'year' => '2024']; echo $date['day'] . '-' . $date['month'] . '-' . $date['year'] . PHP_EOL;
+$date = ['day' => '30' , 'month' => '08' , 'year' => '2024']; echo $date['year'] . '-' . $date['month'] . '-' . $date['day'] . PHP_EOL;
+fatamorgana('Длина массива в PHP');
+echo count($array) . PHP_EOL; // янверь февраль март апрель май и т.д. 12 месяцев
+$array = ['a' => 1, 'b' => 2, 'c' => 3, 'd' => 4]; echo count($array) . PHP_EOL;
+fatamorgana('Последний элемент массива в PHP');
+$array = ['a', 'b', 'c', 'd', 'e'];; echo end($array) . PHP_EOL;
+echo (count($array) - 1) . ' '; echo (count($array) - 2) . PHP_EOL; // последний и предпоследний массив
+fatamorgana('Изменение элементов массива в PHP');
+$array = ['a' => 1, 'b' => 2, 'c' => 3]; $array['a'] = 'f'; $array['b'] = 'r'; $array['c'] = 'i'; $array[3] = 'd'; echo $array[0] . PHP_EOL;
+fatamorgana('Перезапись элементов массива в PHP');
+$array = ['a' => 1, 'b' => 2, 'c' => 3]; $array['a'] += 3; $array['b'] += 3; $array['c'] += 3; echo $array['a'] . ' ' . $array['b'] . ' ' . $array['c'] . PHP_EOL;
