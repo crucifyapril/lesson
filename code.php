@@ -99,6 +99,6 @@ fatamorgana('Последний элемент массива в PHP');
 $array = ['a', 'b', 'c', 'd', 'e'];; echo end($array) . PHP_EOL;
 echo (count($array) - 1) . ' '; echo (count($array) - 2) . PHP_EOL; // последний и предпоследний массив
 fatamorgana('Изменение элементов массива в PHP');
-$array = ['a' => 1, 'b' => 2, 'c' => 3]; $array['a'] = 'f'; $array['b'] = 'r'; $array['c'] = 'i'; $array[3] = 'd'; echo $array[0] . PHP_EOL;
+$array = ['a' => 1, 'b' => 2, 'c' => 3]; $array['a'] = 'f'; $array['b'] = 'r'; $array['c'] = 'i'; $array[3] = 'd'; echo $array['a'] . PHP_EOL;
 fatamorgana('Перезапись элементов массива в PHP');
 $array = ['a' => 1, 'b' => 2, 'c' => 3]; $array['a'] += 3; $array['b'] += 3; $array['c'] += 3; echo $array['a'] . ' ' . $array['b'] . ' ' . $array['c'] . PHP_EOL;
