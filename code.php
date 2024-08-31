@@ -102,3 +102,7 @@ fatamorgana('Изменение элементов массива в PHP');
 $array = ['a' => 1, 'b' => 2, 'c' => 3]; $array['a'] = 'f'; $array['b'] = 'r'; $array['c'] = 'i'; $array[3] = 'd'; echo $array['a'] . PHP_EOL;
 fatamorgana('Перезапись элементов массива в PHP');
 $array = ['a' => 1, 'b' => 2, 'c' => 3]; $array['a'] += 3; $array['b'] += 3; $array['c'] += 3; echo $array['a'] . ' ' . $array['b'] . ' ' . $array['c'] . PHP_EOL;
+fatamorgana('Заполнение массивов в PHP');
+$array = []; array_push($array, 1, 2, 3, 4, 5); echo $array[0] . ' ' . $array[1] . ' ' . $array[2] . ' ' . $array[3] . ' ' . $array[4] . PHP_EOL;
+$array = [1, 2, 3]; array_push($array, 4, 5); echo $array[0] . ' ' . $array[1] . ' ' . $array[2] . ' ' . $array[3] . ' ' . $array[4] . PHP_EOL;
+fatamorgana('Явное указание ключей в PHP');
