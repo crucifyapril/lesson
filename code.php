@@ -106,3 +106,100 @@ fatamorgana('Заполнение массивов в PHP');
 $array = []; array_push($array, 1, 2, 3, 4, 5); echo $array[0] . ' ' . $array[1] . ' ' . $array[2] . ' ' . $array[3] . ' ' . $array[4] . PHP_EOL;
 $array = [1, 2, 3]; array_push($array, 4, 5); echo $array[0] . ' ' . $array[1] . ' ' . $array[2] . ' ' . $array[3] . ' ' . $array[4] . PHP_EOL;
 fatamorgana('Явное указание ключей в PHP');
+$array = []; $array['year'] = 2024; $array['month'] = 8; $array['day'] = 31; echo $array['a'] . ' ' . $array['b'] . ' ' . $array['c'] . PHP_EOL;
+fatamorgana('Ключи из переменных в PHP');
+$array = [1, 2, 3, 4, 5]; $key1 = 0; $key2 = 1; echo $array[$key1] . ' ' . $array[$key2] . PHP_EOL;
+$array = ['a' => 1, 'b' => 2, 'c' => 3]; $key = 'a'; echo $array[$key] . PHP_EOL;
+fatamorgana('Конструкция if-else в PHP, Операторы больше и меньше в PHP');
+$test = 1; if ($test > 10) echo 'Больше заданной'; else echo 'Меньше заданной'; echo PHP_EOL; // Необязательность фигурных скобок в PHP - в будущем будем использовать с фигурными скобками
+if ($test < 10) echo 'Меньше заданной'; else echo 'Больше заданной'; echo PHP_EOL;
+if ($test >= 10) echo 'Больше или равно заданной'; else echo 'Меньше заданной'; echo PHP_EOL;
+if ($test <= 10) echo 'Меньше или равно заданной'; else echo 'Больше заданной'; echo PHP_EOL;
+fatamorgana('Проверка на равенство в PHP');
+$test = 1; if ($test === 10) echo 'Равно заданной'; else echo 'Не равно заданной'; echo PHP_EOL; // строгое сравнение
+$test = 1;
+
+if ($test != 0) {
+    echo 'true'; // сработает это, так как переменная НЕ равна 0
+} else {
+    echo 'false';
+} // как правильно писать условия пример
+fatamorgana('Сравнение переменных в PHP');
+$test1 = 1; $test2 = 2; if ($test1 > $test2) echo $test1 . ' Больше ' . $test2; else echo $test1 . ' Меньше ' . $test2; echo PHP_EOL;
+fatamorgana('Нюансы при сравнении типов данных в PHP');
+if (0 == '0') echo 'true'; else echo 'false'; echo PHP_EOL; // В настоящее время в PHP общепринято везде стараться использовать строгое сравнение. Считается, что в этом случае код менее подвержен ошибкам.
+fatamorgana('Сложные условия в if-else в PHP, Логическое И в PHP');
+$num = 3; $num1 = 2; $num2 = 3; if ($num > 0 && $num < 10) echo 'true'; else echo 'false'; echo PHP_EOL;
+if ($num >= 10 and $num <= 10) echo 'true'; else echo 'false'; echo PHP_EOL; // and - логическое И
+if ($num1 <= 10 && $num2 >= 3) echo 'true'; else echo 'false'; echo PHP_EOL; // но лучше использовать &&
+fatamorgana('Логическое ИЛИ в PHP'); // || и or - логическое ИЛИ, первое предпочтительнее
+fatamorgana('Приоритет операций сравнения в PHP'); //Операция and имеет приоритет над or. В следующем примере условие сработает, если переменная $num от 0 до 5 ИЛИ от 10 до 20:
+if ($num > 0 && $num < 5 || $num > 10 && $num < 20) { echo 'true'; } else { echo 'false'; } echo PHP_EOL;
+fatamorgana('Группировка условий в PHP');
+if ( ($num > 0 and $num < 5) or ($num > 10 and $num < 20) ) { echo 'true'; } else { echo 'false'; } echo PHP_EOL;
+fatamorgana('Инвертирование высказываний в if-else');
+if ( !($num1 >= 0 || $num2 <= 10) ) { echo '+++'; } else { echo '---'; } echo PHP_EOL; // ! - инвертирование делает условие таким $num <= 0 or $num >= 10
+fatamorgana('Конструкция if-else и булевы значения');
+$test = true; if ($test === true) { echo 'true'; } else { echo 'false'; } echo PHP_EOL;
+if ($test === false) { echo 'true'; } else { echo 'false'; } echo PHP_EOL;
+fatamorgana('Логические значения и двойное равно');
+$test = 1; $test2 = 0; if ($test == true && $test2 == false) { echo 'true'; }// сработает это, тк 1 == true и 0 == false - это верно
+else { echo 'false'; } echo PHP_EOL;
+fatamorgana('Сокращенный if в конструкции if-else');
+if ($test) { echo 'true'; } else { echo 'false'; } echo PHP_EOL; // ($test == true)
+if (!$test) { echo 'true'; } else { echo 'false'; } echo PHP_EOL; // ($test != true)
+fatamorgana('Нюанс сокращенных операций'); // идет по не строгому сравнению
+fatamorgana('Команда isset в PHP');
+$test = null; if ($test !== null) { echo 'переменная не null'; } else { echo 'null'; } echo PHP_EOL; // проверка что переменная не равна null
+if (isset($test)) { echo 'переменная не null'; } else { echo 'null'; } echo PHP_EOL; // удобнее командой isset, имеет строгое сравнение
+fatamorgana('Инвертирование высказывания в PHP');
+if (!isset($test)) { echo 'переменная не null'; } else { echo 'null'; } echo PHP_EOL; // не null - это верно
+fatamorgana('Элементы массивов в PHP');
+$array = ['a', 'b', 'c']; if (isset($arr['5'])) { echo $arr['5']; } else { echo 'element does not exist'; } echo PHP_EOL;
+fatamorgana('Команда empty в PHP');
+$test = ''; if (empty($test)) { echo 'empty'; } else { echo 'not empty'; } echo PHP_EOL; // инвертируемая !empty будет результатом not empty
+fatamorgana('Сокращенный синтаксис if-else в PHP');
+$test = 1; if ($test === 10) { echo 'Равно заданной'; } echo PHP_EOL; // в противном случае ничего не произойдет
+fatamorgana('Проблема необязательности фигурных скобок в PHP');
+$test = 3; if ($test > 0) echo $test; echo '+++'; echo PHP_EOL; // сработает только первая строка по условию а вторая всегда
+if ($test > 0) { echo $test; echo '+++'; } echo PHP_EOL; // сработают две строки ПО УСЛОВИЮ
+fatamorgana('Комбинации конструкций if-else в PHP');
+$day = 1; if ($day >= 1 && $day <= 10) { echo 'первая декада месяца'; } if ($day >= 11 && $day <= 20) { echo 'вторая декада месяца'; } if ($day >= 21 && $day <= 31) { echo 'третья декада месяца'; } echo PHP_EOL;
+fatamorgana('Конструкция elseif в PHP');
+$day = 100; if ($day >= 1 && $day <= 10) { echo 'первая декада месяца'; } elseif ($day >= 11 && $day <= 20) { echo 'вторая декада месяца'; } elseif ($day >= 21 && $day <= 31) { echo 'третья декада месяца'; } else { echo 'такого дня нет'; } echo PHP_EOL;
+fatamorgana('Вложенные if в PHP');
+//$age = 3; if ($age <= 10 || $age >= 99 ) {  }
+fatamorgana('Конструкция switch-case в PHP');
+$num = 3; // альтернатива elseif
+
+switch ($num) {
+    case 1:
+        echo 'Зима' . PHP_EOL;
+        break;
+    case 2:
+        echo 'Весна' . PHP_EOL;
+        break;
+    case 3:
+        echo 'Лето' . PHP_EOL;
+        break;
+    case 4:
+        echo 'Осень' . PHP_EOL;
+        break;
+    default:
+        echo "Некорректное значение";
+        break;
+}
+fatamorgana('Необязательность default в PHP');
+switch ($num) { case 1: echo 'Зима'; break; case 2: echo 'Весна'; break; case 3: echo 'Лето'; break; case 4: echo 'Осень'; break; } echo PHP_EOL;
+fatamorgana('Необязательность break в PHP');
+switch ($num) { case 1: echo 'Зима'; case 2: echo 'Весна'; case 3: echo 'Лето'; case 4: echo 'Осень'; } echo PHP_EOL; // без break после выполнения будет продолжаться выполнение
+fatamorgana('Тернарный оператор в PHP');
+$num = -5; $res = ($num >= 0) ? 1 : -1; echo $res; echo PHP_EOL;
+fatamorgana('Оператор объединения с null в PHP');
+$user = ['name' => 'john', 'age' => 30]; echo $user['name'] ?? 'unknown'; echo PHP_EOL;
+fatamorgana('Цепочки операторов объединения с null в PHP');
+echo $user['name'] ?? isset($user['surname']) ?? 'unknown'; echo PHP_EOL;
+fatamorgana('Логические операции в PHP');
+$a = 2 * (3 - 1); $b = 6 - 2; $res = $a == $b; var_dump($res);
+$a = 5 * (7 - 4); $b = 1 + 2 + 7; $res = $a > $b; var_dump($res);
+$a = 2 ** 4; $b = 4 ** 2; $res = $a != $b; var_dump($res);
