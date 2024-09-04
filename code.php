@@ -8,7 +8,7 @@ $a = 20;
 echo $a . PHP_EOL;
 $a = 1 + 2 + 3;
 echo $a . PHP_EOL;
-fatamorgana('Математические операции с переменными в PHP');
+text('Математические операции с переменными в PHP');
 $a = 10;
 $b = 2;
 $c = 10;
@@ -29,68 +29,68 @@ $c = $a - $b;
 $d = 7;
 $res = $c + $d;
 echo $res . PHP_EOL;
-fatamorgana('Дроби в PHP');
+text('Дроби в PHP');
 $a = 1.5;
 $b = 0.75;
 echo $a + $b . PHP_EOL;
-fatamorgana('Отрицательные числа в PHP');
+text('Отрицательные числа в PHP');
 $a = -100;
 echo $a . PHP_EOL;
 $a = -32;
 echo -$a . PHP_EOL;
-fatamorgana('Остаток от деления в PHP');
+text('Остаток от деления в PHP');
 $a = 10;
 $b = 3;
 echo $a % $b . PHP_EOL;
-fatamorgana('Возведение в степень в PHP');
+text('Возведение в степень в PHP');
 $a = 2;
 $b = 10;
 echo $a ** $b . PHP_EOL;
-fatamorgana('Сложение строк в PHP');
+text('Сложение строк в PHP');
 $str = 'hello';
 echo $str . PHP_EOL;
 $str = 'abc';
 $str2 = 'def';
 echo $str . $str2 . PHP_EOL;
-fatamorgana('Пробелы при сложении строк в PHP');
+text('Пробелы при сложении строк в PHP');
 $str = 'hello';
 $str2 = ' world';
 echo $str . $str2 . PHP_EOL;
-fatamorgana('Длина строки в PHP');
+text('Длина строки в PHP');
 $str = 'hauntingclaire';
 echo strlen($str) . PHP_EOL;
-fatamorgana('Проблема с кириллицей в PHP');
+text('Проблема с кириллицей в PHP');
 echo strlen('привет') . PHP_EOL;
 echo mb_strlen('привет') . PHP_EOL;
-fatamorgana('Работа с HTML тегами в PHP'); // разнообразие в применении
+text('Работа с HTML тегами в PHP'); // разнообразие в применении
 echo '<i>hello</i>' . PHP_EOL;
 echo '<br>123456789</br>' . PHP_EOL;
-fatamorgana('Атрибуты тегов в PHP');
+text('Атрибуты тегов в PHP');
 echo '<a href="1st.php">ссылка</a>';
-fatamorgana('Логические значения в PHP');
+text('Логические значения в PHP');
 $a = true;
 $b = false;
 echo $a . PHP_EOL;
 echo $b . PHP_EOL;
-fatamorgana('Значение null в PHP');
+text('Значение null в PHP');
 $a = null;
 echo $a . PHP_EOL; // echo $doesntexist . PHP_EOL; // PHP Warning:  Undefined variable $doesntexist
-fatamorgana('Принудительное преобразование в целые числа на PHP');
+text('Принудительное преобразование в целые числа на PHP');
 $test = '12345';
 echo (int)$test . PHP_EOL;
 var_dump($test);
 var_dump((int)$test);
-fatamorgana('Принудительное преобразование в дробные числа в PHP');
+text('Принудительное преобразование в дробные числа в PHP');
 $test = '12.345';
 echo (float)$test . PHP_EOL;
 var_dump($test);
 var_dump((float)$test);
-fatamorgana('Преобразование дроби к целому числу в PHP');
+text('Преобразование дроби к целому числу в PHP');
 $test = 12.345;
 echo (int)$test . PHP_EOL;
 var_dump($test);
 var_dump((int)$test);
-fatamorgana('Преобразование к строке в PHP');
+text('Преобразование к строке в PHP');
 $test = 12.345;
 echo (string)$test . PHP_EOL;
 var_dump($test);
@@ -99,7 +99,7 @@ $test = 12345;
 echo (string)$test . PHP_EOL;
 var_dump($test);
 var_dump((string)$test);
-fatamorgana('Получение символов строки на PHP');
+text('Получение символов строки на PHP');
 $str = 'abcde';
 echo $str[0];
 echo $str[2];
@@ -113,20 +113,20 @@ echo $str[0] . PHP_EOL;
 $str = 'abcde';
 $num = $str[0];
 echo $num . PHP_EOL;
-fatamorgana('Последний символ строки PHP');
+text('Последний символ строки PHP');
 $str = 'abcde';
 $last = strlen($str) - 1;
 echo $str[$last] . PHP_EOL;
 $prelast = strlen($str) - 2;
 echo $str[$prelast] . PHP_EOL;
-fatamorgana('Цифры в строке на PHP');
+text('Цифры в строке на PHP');
 $str = '12345';
 echo $str[0] + $str[1] + $str[2] + $str[3] + $str[4] . PHP_EOL;
-fatamorgana('Обращение к цифрам числа на PHP');
+text('Обращение к цифрам числа на PHP');
 $num = 12345;
 $str = (string)$num;
 echo $str[0] + $str[1] + $str[2] + $str[3] + $str[4] . PHP_EOL;
-fatamorgana('Сокращенные операции в PHP');
+text('Сокращенные операции в PHP');
 $num = 47;
 $num += 7;
 $num -= 18;
@@ -136,21 +136,21 @@ $str = 'a';
 $str .= 'b';
 $str .= 'c';
 echo $num . $str . PHP_EOL;
-fatamorgana('Операции инкремента и декремента в PHP');
+text('Операции инкремента и декремента в PHP');
 $num = 10;
 $num++;
 $num++;
 $num--;
 echo $num . PHP_EOL;
-fatamorgana('Практика на операции в PHP');
+text('Практика на операции в PHP');
 $seconds = 86400 * 365;
 echo $seconds . PHP_EOL; // сколько секунд в году
 $minutes = 60 * 24 * 365;
 echo $minutes . PHP_EOL; // сколько минут в году
-fatamorgana('Массивы в PHP');
+text('Массивы в PHP');
 $array = [1, 2, 3];
 var_dump($array);
-fatamorgana('Как вывести отдельный элемент массива в PHP');
+text('Как вывести отдельный элемент массива в PHP');
 echo $array[0] . PHP_EOL;
 echo $array[1] . PHP_EOL;
 echo $array[2] . PHP_EOL;
@@ -161,12 +161,12 @@ echo $array[0] + $array[1] + $array[2] . PHP_EOL;
 $array = [2, 5, 3, 9];
 $res = $array[0] * $array[1] + $array[2] * $array[3];
 echo $res . PHP_EOL;
-fatamorgana('Ассоциативные массивы в PHP');
+text('Ассоциативные массивы в PHP');
 $array = [1 => 'a', 2 => 'b', 3 => 'c'];
 echo $array[1];
 echo $array[2];
 echo $array[3] . PHP_EOL;
-fatamorgana('Хитрость с ключами в PHP');
+text('Хитрость с ключами в PHP');
 $array = [
     1 => 'Январь',
     'Февраль',
@@ -182,49 +182,49 @@ $array = [
     'Декабрь'
 ];
 echo $array[1] . PHP_EOL;
-fatamorgana('Строковые ключи в PHP');
+text('Строковые ключи в PHP');
 $user = ['name' => 'Alex', 'lastname' => 'Smith', 'patronymic' => 'Petrov'];
 echo $user['name'] . ' ';
 echo $user['lastname'] . ' ';
 echo $user['patronymic'] . PHP_EOL;
 $date = ['day' => '30', 'month' => '08', 'year' => '2024'];
 echo $date['year'] . '-' . $date['month'] . '-' . $date['day'] . PHP_EOL;
-fatamorgana('Длина массива в PHP');
+text('Длина массива в PHP');
 echo count($array) . PHP_EOL; // янверь февраль март апрель май и т.д. 12 месяцев
 $array = ['a' => 1, 'b' => 2, 'c' => 3, 'd' => 4];
 echo count($array) . PHP_EOL;
-fatamorgana('Последний элемент массива в PHP');
+text('Последний элемент массива в PHP');
 $array = ['a', 'b', 'c', 'd', 'e'];;
 echo end($array) . PHP_EOL;
 echo (count($array) - 1) . ' ';
 echo (count($array) - 2) . PHP_EOL; // последний и предпоследний массив
-fatamorgana('Изменение элементов массива в PHP');
+text('Изменение элементов массива в PHP');
 $array = ['a' => 1, 'b' => 2, 'c' => 3];
 $array['a'] = 'f';
 $array['b'] = 'r';
 $array['c'] = 'i';
 $array[3] = 'd';
 echo $array['a'] . PHP_EOL;
-fatamorgana('Перезапись элементов массива в PHP');
+text('Перезапись элементов массива в PHP');
 $array = ['a' => 1, 'b' => 2, 'c' => 3];
 $array['a'] += 3;
 $array['b'] += 3;
 $array['c'] += 3;
 echo $array['a'] . ' ' . $array['b'] . ' ' . $array['c'] . PHP_EOL;
-fatamorgana('Заполнение массивов в PHP');
+text('Заполнение массивов в PHP');
 $array = [];
 array_push($array, 1, 2, 3, 4, 5);
 echo $array[0] . ' ' . $array[1] . ' ' . $array[2] . ' ' . $array[3] . ' ' . $array[4] . PHP_EOL;
 $array = [1, 2, 3];
 array_push($array, 4, 5);
 echo $array[0] . ' ' . $array[1] . ' ' . $array[2] . ' ' . $array[3] . ' ' . $array[4] . PHP_EOL;
-fatamorgana('Явное указание ключей в PHP');
+text('Явное указание ключей в PHP');
 $array = [];
 $array['year'] = 2024;
 $array['month'] = 8;
 $array['day'] = 31;
 echo $array['a'] . ' ' . $array['b'] . ' ' . $array['c'] . PHP_EOL;
-fatamorgana('Ключи из переменных в PHP');
+text('Ключи из переменных в PHP');
 $array = [1, 2, 3, 4, 5];
 $key1 = 0;
 $key2 = 1;
@@ -232,7 +232,7 @@ echo $array[$key1] . ' ' . $array[$key2] . PHP_EOL;
 $array = ['a' => 1, 'b' => 2, 'c' => 3];
 $key = 'a';
 echo $array[$key] . PHP_EOL;
-fatamorgana('Конструкция if-else в PHP, Операторы больше и меньше в PHP');
+text('Конструкция if-else в PHP, Операторы больше и меньше в PHP');
 $test = 1;
 if ($test > 10) {
     echo 'Больше заданной';
@@ -258,7 +258,7 @@ if ($test <= 10) {
     echo 'Больше заданной';
 }
 echo PHP_EOL;
-fatamorgana('Проверка на равенство в PHP');
+text('Проверка на равенство в PHP');
 $test = 1;
 if ($test === 10) {
     echo 'Равно заданной';
@@ -273,7 +273,7 @@ if ($test != 0) {
 } else {
     echo 'false';
 } // как правильно писать условия пример
-fatamorgana('Сравнение переменных в PHP');
+text('Сравнение переменных в PHP');
 $test1 = 1;
 $test2 = 2;
 if ($test1 > $test2) {
@@ -282,14 +282,14 @@ if ($test1 > $test2) {
     echo $test1 . ' Меньше ' . $test2;
 }
 echo PHP_EOL;
-fatamorgana('Нюансы при сравнении типов данных в PHP');
+text('Нюансы при сравнении типов данных в PHP');
 if (0 == '0') {
     echo 'true';
 } else {
     echo 'false';
 }
 echo PHP_EOL; // В настоящее время в PHP общепринято везде стараться использовать строгое сравнение. Считается, что в этом случае код менее подвержен ошибкам.
-fatamorgana('Сложные условия в if-else в PHP, Логическое И в PHP');
+text('Сложные условия в if-else в PHP, Логическое И в PHP');
 $num = 3;
 $num1 = 2;
 $num2 = 3;
@@ -311,8 +311,8 @@ if ($num1 <= 10 && $num2 >= 3) {
     echo 'false';
 }
 echo PHP_EOL; // но лучше использовать &&
-fatamorgana('Логическое ИЛИ в PHP'); // || и or - логическое ИЛИ, первое предпочтительнее
-fatamorgana(
+text('Логическое ИЛИ в PHP'); // || и or - логическое ИЛИ, первое предпочтительнее
+text(
     'Приоритет операций сравнения в PHP'
 ); //Операция and имеет приоритет над or. В следующем примере условие сработает, если переменная $num от 0 до 5 ИЛИ от 10 до 20:
 if ($num > 0 && $num < 5 || $num > 10 && $num < 20) {
@@ -320,22 +320,25 @@ if ($num > 0 && $num < 5 || $num > 10 && $num < 20) {
 } else {
     echo 'false';
 }
+
 echo PHP_EOL;
-fatamorgana('Группировка условий в PHP');
+text('Группировка условий в PHP');
 if (($num > 0 and $num < 5) or ($num > 10 and $num < 20)) {
     echo 'true';
 } else {
     echo 'false';
 }
 echo PHP_EOL;
-fatamorgana('Инвертирование высказываний в if-else');
+
+text('Инвертирование высказываний в if-else');
 if (!($num1 >= 0 || $num2 <= 10)) {
     echo '+++';
 } else {
     echo '---';
 }
+
 echo PHP_EOL; // ! - инвертирование делает условие таким $num <= 0 or $num >= 10
-fatamorgana('Конструкция if-else и булевы значения');
+text('Конструкция if-else и булевы значения');
 $test = true;
 if ($test === true) {
     echo 'true';
@@ -349,17 +352,18 @@ if ($test === false) {
     echo 'false';
 }
 echo PHP_EOL;
-fatamorgana('Логические значения и двойное равно');
+
+text('Логические значения и двойное равно');
 $test = 1;
 $test2 = 0;
 if ($test == true && $test2 == false) {
     echo 'true';
-}// сработает это, тк 1 == true и 0 == false - это верно
-else {
+} else { // сработает это, тк 1 == true и 0 == false - это верно
     echo 'false';
 }
 echo PHP_EOL;
-fatamorgana('Сокращенный if в конструкции if-else');
+
+text('Сокращенный if в конструкции if-else');
 if ($test) {
     echo 'true';
 } else {
@@ -372,8 +376,8 @@ if (!$test) {
     echo 'false';
 }
 echo PHP_EOL; // ($test != true)
-fatamorgana('Нюанс сокращенных операций'); // идет по не строгому сравнению
-fatamorgana('Команда isset в PHP');
+text('Нюанс сокращенных операций'); // идет по не строгому сравнению
+text('Команда isset в PHP');
 $test = null;
 if ($test !== null) {
     echo 'переменная не null';
@@ -387,14 +391,14 @@ if (isset($test)) {
     echo 'null';
 }
 echo PHP_EOL; // удобнее командой isset, имеет строгое сравнение
-fatamorgana('Инвертирование высказывания в PHP');
+text('Инвертирование высказывания в PHP');
 if (!isset($test)) {
     echo 'переменная не null';
 } else {
     echo 'null';
 }
 echo PHP_EOL; // не null - это верно
-fatamorgana('Элементы массивов в PHP');
+text('Элементы массивов в PHP');
 $array = ['a', 'b', 'c'];
 if (isset($arr['5'])) {
     echo $arr['5'];
@@ -402,7 +406,7 @@ if (isset($arr['5'])) {
     echo 'element does not exist';
 }
 echo PHP_EOL;
-fatamorgana('Команда empty в PHP');
+text('Команда empty в PHP');
 $test = '';
 if (empty($test)) {
     echo 'empty';
@@ -410,13 +414,13 @@ if (empty($test)) {
     echo 'not empty';
 }
 echo PHP_EOL; // инвертируемая !empty будет результатом not empty
-fatamorgana('Сокращенный синтаксис if-else в PHP');
+text('Сокращенный синтаксис if-else в PHP');
 $test = 1;
 if ($test === 10) {
     echo 'Равно заданной';
 }
 echo PHP_EOL; // в противном случае ничего не произойдет
-fatamorgana('Проблема необязательности фигурных скобок в PHP');
+text('Проблема необязательности фигурных скобок в PHP');
 $test = 3;
 if ($test > 0) {
     echo $test;
@@ -428,7 +432,7 @@ if ($test > 0) {
     echo '+++';
 }
 echo PHP_EOL; // сработают две строки ПО УСЛОВИЮ
-fatamorgana('Комбинации конструкций if-else в PHP');
+text('Комбинации конструкций if-else в PHP');
 $day = 1;
 if ($day >= 1 && $day <= 10) {
     echo 'первая декада месяца';
@@ -440,7 +444,7 @@ if ($day >= 21 && $day <= 31) {
     echo 'третья декада месяца';
 }
 echo PHP_EOL;
-fatamorgana('Конструкция elseif в PHP');
+text('Конструкция elseif в PHP');
 $day = 100;
 if ($day >= 1 && $day <= 10) {
     echo 'первая декада месяца';
@@ -452,9 +456,14 @@ if ($day >= 1 && $day <= 10) {
     echo 'такого дня нет';
 }
 echo PHP_EOL;
-fatamorgana('Вложенные if в PHP');
-//$age = 3; if ($age <= 10 || $age >= 99 ) {  }
-fatamorgana('Конструкция switch-case в PHP');
+text('Вложенные if в PHP');
+$age = 3;
+if ($age <= 10 || $age >= 99 ) {
+    if ($age >= 9)
+    echo 'однозначный'; } else {
+        echo 'двузначный';
+    }
+text('Конструкция switch-case в PHP');
 $num = 3; // альтернатива elseif
 
 switch ($num) {
@@ -474,7 +483,7 @@ switch ($num) {
         echo "Некорректное значение";
         break;
 }
-fatamorgana('Необязательность default в PHP');
+text('Необязательность default в PHP');
 switch ($num) {
     case 1:
         echo 'Зима';
@@ -490,7 +499,7 @@ switch ($num) {
         break;
 }
 echo PHP_EOL;
-fatamorgana('Необязательность break в PHP');
+text('Необязательность break в PHP');
 switch ($num) {
     case 1:
         echo 'Зима';
@@ -502,19 +511,19 @@ switch ($num) {
         echo 'Осень';
 }
 echo PHP_EOL; // без break после выполнения будет продолжаться выполнение
-fatamorgana('Тернарный оператор в PHP');
+text('Тернарный оператор в PHP');
 $num = -5;
 $res = ($num >= 0) ? 1 : -1;
 echo $res;
 echo PHP_EOL;
-fatamorgana('Оператор объединения с null в PHP');
+text('Оператор объединения с null в PHP');
 $user = ['name' => 'john', 'age' => 30];
 echo $user['name'] ?? 'unknown';
 echo PHP_EOL;
-fatamorgana('Цепочки операторов объединения с null в PHP');
+text('Цепочки операторов объединения с null в PHP');
 echo $user['name'] ?? isset($user['surname']) ?? 'unknown';
 echo PHP_EOL;
-fatamorgana('Логические операции в PHP');
+text('Логические операции в PHP');
 $a = 2 * (3 - 1);
 $b = 6 - 2;
 $res = $a == $b;
@@ -527,3 +536,37 @@ $a = 2 ** 4;
 $b = 4 ** 2;
 $res = $a != $b;
 var_dump($res);
+text('Проверка длины строк и массивов в PHP');
+$array = [1, 2, 3];
+if (count($array) == 3) {
+    echo 'Длина массива равна ' . count($array) . PHP_EOL;
+}
+text('Проверка символа строки в PHP');
+$str = '12345';
+$last = $str[strlen($str) - 1];
+
+if ($last == '0') {
+    echo '!';
+}
+text('Проверка символа строки в PHP');
+$str = '12345';
+$last = $str[strlen($str) - 1];
+
+if ($last == 0) {
+    echo 'последняя строка заканчивается на 0';
+} else {
+    echo 'последняя строка не заканчивается на 0';
+}
+text('Практика на условия if-else в PHP');
+$month = 12;
+if ($month >= 1 && $month <= 3) {
+    echo 'зима';
+} elseif ($month >= 4 && $month <= 6) {
+    echo 'весна';
+} elseif ($month >= 7 && $month <= 9) {
+    echo 'лето';
+} elseif ($month >= 10 && $month <= 12) {
+    echo 'осень';
+} else {
+    echo 'некорректное значение месяца';
+}
