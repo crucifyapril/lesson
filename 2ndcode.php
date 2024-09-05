@@ -801,3 +801,134 @@ for ($i = 0; $i < 4; $i++) {
 }
 
 print_r($arr);
+
+echo PHP_EOL . '-------------------------------' . PHP_EOL;
+
+$arr = [];
+
+for ($i = 0; $i < 4; $i++) {
+    $arr[$i] = [];
+    for ($j = 0; $j < 3; $j++) {
+        $arr[$i][$j] = [];
+        for ($k = 0; $k < 2; $k++) {
+            $arr[$i][$j][$k] = 2 * $j + $k + 1;
+        }
+    }
+}
+print_r($arr);
+
+text('Массив ассоциативных массивов в PHP');
+
+$products = [
+    [
+        'name'   => 'мясо',
+        'price'  => 100,
+        'amount' => 5,
+    ],
+    [
+        'name'   => 'овощи',
+        'price'  => 200,
+        'amount' => 6,
+    ],
+    [
+        'name'   => 'фрукты',
+        'price'  => 300,
+        'amount' => 7,
+    ],
+];
+
+foreach ($products as $value) {
+    echo $value['name'] . ' ' . $value['price'] . ' рублей ' . $value['amount'] . ' шт.' . PHP_EOL;
+}
+
+text('Конвертация многомерных массивов в PHP');
+
+$cities = [
+        [
+            'country' => 'Россия',
+            'city' =>    'Москва',
+        ],
+        [
+            'country' => 'Беларусь',
+            'city' =>    'Минск',
+        ],
+        [
+            'country' => 'Россия',
+            'city' =>    'Питер',
+        ],
+        [
+            'country' => 'Россия',
+            'city' =>    'Владивосток',
+        ],
+        [
+            'country' => 'Украина',
+            'city' =>    'Львов',
+        ],
+        [
+            'country' => 'Беларусь',
+            'city' =>    'Могилев',
+        ],
+        [
+            'country' => 'Украина',
+            'city' =>    'Киев',
+        ],
+];
+
+$result = [];
+
+foreach ($cities as $city) {
+    $country = $city['country'];
+    $cityName = $city['city'];
+    $result[$country][] = $cityName;
+}
+
+print_r($result);
+
+$timedate = [
+    [
+        'date'  => '2019-12-29',
+        'event' => 'name1'
+    ],
+    [
+        'date'  => '2019-12-31',
+        'event' => 'name2'
+    ],
+    [
+        'date'  => '2019-12-29',
+        'event' => 'name3'
+    ],
+    [
+        'date'  => '2019-12-30',
+        'event' => 'name4'
+    ],
+    [
+        'date'  => '2019-12-29',
+        'event' => 'name5'
+    ],
+    [
+        'date'  => '2019-12-31',
+        'event' => 'name6'
+    ],
+    [
+        'date'  => '2019-12-29',
+        'event' => 'name7'
+    ],
+    [
+        'date'  => '2019-12-30',
+        'event' => 'name8'
+    ],
+    [
+        'date'  => '2019-12-30',
+        'event' => 'name9'
+    ],
+];
+
+$res = [];
+
+foreach ($timedate as $value) {
+    $date = $value['date'];
+    $event = $value['event'];
+    $res[$date][] = $event;
+}
+
+print_r($res);
