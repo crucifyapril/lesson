@@ -932,3 +932,193 @@ foreach ($timedate as $value) {
 }
 
 print_r($res);
+
+$timedate = [
+    '2019-12-29'=> ['name1', 'name2', 'name3', 'name4'],
+    '2019-12-30'=> ['name5', 'name6', 'name7'],
+    '2019-12-31'=> ['name8', 'name9'],
+];
+
+$res = [];
+
+foreach ($timedate as $date => $events) {
+    foreach ($events as $item) {
+        $res[] = [
+            'date'  => $date,
+            'event' => $item
+        ];
+    }
+}
+print_r($res);
+
+text('функции со строками в PHP');
+
+$text = 'php';
+echo strtoupper($text) . PHP_EOL;
+echo strtolower($text) . PHP_EOL;
+echo ucfirst('london') . PHP_EOL;
+echo lcfirst('London') . PHP_EOL;
+echo ucwords('london is the capital of great britain') . PHP_EOL;
+echo strlen('html css php') . PHP_EOL;
+$password = 'J756VVtr';
+if (strlen($password) > 5 && strlen($password) < 10) {
+    echo 'пароль подходит' . PHP_EOL;
+} else {
+    echo 'пароль не подходит' . PHP_EOL;
+}
+$text = 'html css php';
+echo substr($text, 0, 4) . PHP_EOL;
+echo substr($text, 5, 3) . PHP_EOL;
+echo substr($text, 9, 3) . PHP_EOL;
+
+$text = 'https://hauntingclaire.ru';
+
+if (strpos($text, 'http://') === 0) {
+    echo 'префикс http://' . PHP_EOL;
+}   elseif (strpos($text, 'https://') === 0) {
+        echo 'префикс https://' . PHP_EOL;
+}
+
+if (strpos($text, '.png') === false || strpos($text, '.jpg') === false) {
+    echo 'нет расширения .png или .jpg' . PHP_EOL;
+} else {
+    echo 'есть расширение .png или .jpg' . PHP_EOL;
+}
+
+$string = 'stroka';
+
+if (strlen($string) > 5) {
+    $string = substr($string, 0, 5);
+    echo $string . '...' . PHP_EOL;
+} else {
+    echo $string . PHP_EOL;
+}
+
+echo str_replace('.', '-', '31.12.2013') . PHP_EOL;
+echo str_replace(['a', 'b', 'c'], [1, 2, 3], 'abcabc') . PHP_EOL;
+echo str_replace([1, 2, 3, 4, 5, 6, 7, 8, 9, 0], '', '1a2b3c4b5d6e7f8g9h0') . PHP_EOL;
+
+$str = 'abc';
+
+echo strtr($str, 'abc', '123') . PHP_EOL;
+echo substr_replace($str, '!!!!!', 0, 3) . PHP_EOL;
+echo strpos('abc abc abc', 'b') . PHP_EOL;
+echo strrpos('abc abc abc', 'b') . PHP_EOL;
+echo strpos('abc abc abc', 'b', 3) . PHP_EOL;
+echo strpos('aaa aaa aaa aaa aaa',' ', 5) . PHP_EOL;
+echo strpos('aaa aaa aaa aaa aaa','..') . PHP_EOL; // если не найдено то возвращает пустоту
+
+if (substr($str, 0, 7) == 'http://' || substr($str, 0, 8) == 'https://')
+    echo "Да";
+else
+    echo "Нет";
+
+$arr = explode(' ', 'html css php');
+var_dump($arr);
+echo implode(' ', $arr) . PHP_EOL;
+
+$date = '2019-12-29';
+
+$arr = explode('-', $date);
+$arr = array_reverse($arr);
+echo implode('.', $arr) . PHP_EOL;
+
+$arr = str_split('1234567890', 2);
+$string = implode('-', $arr);
+echo $string . PHP_EOL;
+
+echo trim('/php/', '/') . PHP_EOL;
+
+$str = 'слова слова слова.';
+echo rtrim($str, '.') . PHP_EOL;
+$str = 'слова слова слова';
+echo rtrim($str, '.') . '.' . PHP_EOL;
+
+echo strrev('12345') . PHP_EOL;
+echo str_shuffle('dfghjkl') . PHP_EOL;
+
+echo number_format('12345678', 0, ' ', ' ') . PHP_EOL;
+
+echo str_repeat('x', 5) . PHP_EOL;
+
+echo strchr('ab-cd-ef', '-cd-ef') . PHP_EOL;
+echo strrchr('ab-cd-ef', '-ef') . PHP_EOL;
+echo strstr('ab--cd--ef', '--cd--ef') . PHP_EOL;
+
+text('Стаандартные функции массивов в PHP');
+
+$arr = [1, 2, 3, 4, 5];
+
+echo in_array(3, $arr) . PHP_EOL;
+
+echo array_sum($arr) . PHP_EOL;
+echo array_product($arr) . PHP_EOL;
+echo array_sum($arr) / count($arr) . PHP_EOL;
+
+$arr = (range(1, 100)); // создание массива с числами от 1 до 100
+$arr = (range('a', 'z')); // создание массива с буквами от a до z
+
+$arr = (range(1, 9));
+$arr = implode('-', $arr);
+echo $arr . PHP_EOL;
+
+$arr = (range(1, 100));
+echo array_sum($arr) . PHP_EOL;
+
+$arr = (range(1, 10));
+echo array_product($arr) . PHP_EOL;
+
+$arr1 = [1, 2, 3];
+$arr2 = ['a', 'b', 'c'];
+
+print_r(array_merge($arr1, $arr2));
+
+$arr = [1, 2, 3, 4, 5];
+
+print_r(array_slice($arr, 1, 3)); // 2, 3, 4
+
+print_r(array_splice($arr, 1, 3));
+
+$arr = [1, 2, 3, 4, 5];
+
+$result = array_splice($arr, 3, 0, ['a', 'b', 'c']);
+print_r($arr);
+
+$arr = [1, 2, 3, 4, 5];
+
+$result = array_splice($arr, 1, 0, ['a', 'b']);
+$result = array_splice($arr, 6, 0, ['c']);
+$result = array_splice($arr, 8, 0, ['d']);
+print_r($arr);
+
+$arr = ['a' => 1, 'b' => 2, 'c' => 3];
+$keys = array_keys($arr);
+$values = array_values($arr);
+
+$array = array_combine($keys, $values);
+print_r($array);
+
+$arr = ['a' => 1, 'b' => 2, 'c' => 3];
+print_r(array_flip($arr));
+$arr = [1, 2, 3, 4, 5];
+print_r(array_reverse($arr));
+
+$arr = ['a', '-', 'b', '-', 'c', '-', 'd'];
+echo (array_search('-', $arr)) . PHP_EOL;
+$result = array_splice($arr, 1, 1);
+print_r($arr);
+
+$arr = ['a', 'b', 'c', 'd', 'e'];
+$arr = array_replace($arr, [0 => '!', 3 => '!!']);
+print_r($arr);
+
+$arr = ['3'=>'a', '1'=>'c', '2'=>'e', '4'=>'b'];
+sort($arr);
+print_r($arr);
+
+text('Время в PHP');
+
+echo mktime(0, 0, 0, 3, 1, 2025) . PHP_EOL;
+
+echo date('Y.m.d.h.i.s') . PHP_EOL;
+echo date('Y-m-d, Y.m.d, H.i.s, H:i:s') . PHP_EOL;
