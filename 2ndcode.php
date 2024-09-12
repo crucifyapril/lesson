@@ -1122,3 +1122,204 @@ echo mktime(0, 0, 0, 3, 1, 2025) . PHP_EOL;
 
 echo date('Y.m.d.h.i.s') . PHP_EOL;
 echo date('Y-m-d, Y.m.d, H.i.s, H:i:s') . PHP_EOL;
+
+text('Практика');
+
+$arr = [1, 2, 3, 4, 5];
+echo (array_sum($arr) / count($arr)) . PHP_EOL;
+
+$sum = 0;
+
+for ($i = 1; $i <= 100; $i++) {
+    $sum += $i;
+}
+echo $sum . ' ';
+
+$arr = [];
+
+for ($i = 0; $i < 10; $i++) { // array_fill(0, 10, 'x');
+    $arr[] = 'x';
+}
+
+print_r($arr);
+
+$arr = [];
+
+for ($i = 0; $i < 10; $i++) {
+    $arr = range(1, 10);
+}
+shuffle($arr);
+print_r($arr);
+
+$arr = [];
+$counter = 1;
+
+for ($i = 0; $i < 3; $i++) {
+    $subarr = [];
+    for ($j = 0; $j < 3; $j++) {
+        $subarr[] = $counter++;
+    }
+    $arr[] = $subarr;
+}
+print_r($arr);
+
+$arr = range(1, 26);
+foreach ($arr as $key => $value) {
+    $key = range('a', 'z');
+    $value = range(1, 26);
+}
+print_r($arr);
+
+text('функции в PHP');
+
+function plusminus($num): void
+{
+    if ($num > 0) {
+        echo '+';
+    } elseif ($num < 0) {
+        echo '-';
+    } else {
+        echo 'числа не существует либо равен 0';
+    }
+    echo PHP_EOL;
+}
+
+plusminus(8);
+
+text('Необязательные параметры функций в PHP');
+function func($num1 = 0, $num2 = 0): void
+{
+    echo $num1 + $num2;
+}
+
+func(2, 3);
+func(3);
+func();
+
+text('Инструкция return в PHP');
+
+function func232($num): int {
+    return $num * $num;
+}
+
+$res = func232(3); // return
+echo $res . PHP_EOL;
+
+text('Последовательный вызов функций в PHP');
+
+function func1($num)
+{
+    return $num * $num;
+}
+
+$res = func1(func1(3));
+echo $res . PHP_EOL;
+
+text('Тонкое место return в PHP');
+
+function func2($num) {
+    if ($num <= 0) {
+        return abs($num);
+    } else {
+        return $num * $num;
+    }
+}
+
+echo func2(10) . PHP_EOL;
+echo func2(-5);
+
+text('return в цикле в PHP');
+function func9($num) {
+    $sum = 0;
+
+    for ($i = 1; $i <= $num; $i++) {
+        $sum += $i;
+    }
+    return $sum;
+}
+
+echo func9(3);
+
+text('применение return в цикле в PHP');
+
+function countDivisions($number): int {
+    $iterations = 0;
+
+    while ($number >= 10) {
+        $number /= 2;
+        $iterations++;
+    }
+
+    return $iterations;
+}
+
+// Пример использования функции
+$number = 100;
+$result = countDivisions($number);
+echo 'Количество итераций: ' . $result;
+
+text('Приемы работы с return в PHP');
+
+function funckontroll($num1, $num2) {
+    if ($num1 > 0 and $num2 > 0) {
+        return $num1 * $num2;
+    } else {
+        return $num1 - $num2;
+    }
+}
+
+echo funckontroll(3, 4);
+
+text('Флаги в функциях PHP');
+
+function chetnoe($nums)
+{
+    foreach ($nums as $value) {
+        if ($value % 2 == 0) {
+            return 'true' . PHP_EOL;
+        } else {
+            return 'false' . PHP_EOL;
+        }
+    }
+}
+$arr = [2, 4, 6, 8, 10];
+echo chetnoe($arr) . PHP_EOL;
+
+function nechetnoe($nums)
+{
+    foreach ($nums as $value) {
+        if ($value % 2 != 0) {
+            return 'true' . PHP_EOL;
+        } else {
+            return 'false' . PHP_EOL;
+        }
+    }
+}
+
+echo nechetnoe($arr) . PHP_EOL;
+
+$arr = [2, 3, 4, 6, 35];
+$birds = [1, 2, 3, 4, 5];
+
+$result = array_filter($arr, fn($value) => !in_array($value, $birds));
+var_dump($result);
+
+function gooseFilter($birds) {
+    $geese = ["African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"];
+    $result = array_filter($birds, fn($value) => !in_array($value, $geese));
+    return array_unique($result);
+}
+
+$arr = ["African", "Roman Tufted", "Nanaya Shiki", "Nanaya Shiki"];
+
+var_dump(12345);
+
+$arr = ['a' => 1, 'b' => 2, 'c' => 3];
+
+$arr['a']++;
+$arr['a']++;
+$arr['b']--;
+$arr['c']--;
+$arr['c']--;
+
+var_dump($arr);
