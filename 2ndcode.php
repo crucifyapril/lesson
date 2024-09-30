@@ -1323,3 +1323,53 @@ $arr['c']--;
 $arr['c']--;
 
 var_dump($arr);
+
+function getdevidebyone($a) {
+    $arr = [];
+    for ($i = 1; $i < $a; $i++) {
+        if ($a % $i == 0) {
+            $arr[] = $i;
+        }
+    }
+    return $arr;
+}
+echo PHP_EOL;
+
+print_r(getdevidebyone(25));
+
+echo PHP_EOL;
+
+function dayinweek() {
+    $arr = ['понедельник', 'вторник', 'среда', 'четверг', 'пятница', 'суббота', 'воскресенье'];
+    $day = date('N');
+    return $arr[$day - 1];
+}
+
+print_r(dayinweek());
+echo PHP_EOL;
+
+function dayinweekwithdate($data) {
+    $array = ['понедельник', 'вторник', 'среда', 'четверг', 'пятница', 'суббота', 'воскресенье'];
+    $day = date('N', strtotime($data));
+    return $array[$day - 1];
+}
+
+print_r(dayinweekwithdate('2024-09-12'));
+echo PHP_EOL;
+
+function visokosniy($year) {
+    if ($year % 4 == 0 && $year % 100 != 0 || $year % 400 == 0) {
+        return 'високосный' . PHP_EOL;
+    } else {
+        return 'не високосный' . PHP_EOL;
+    }
+}
+
+echo visokosniy(2024);
+
+$arr = ['1', '2', '3'];
+echo "aaa $arr[0] bbb $arr[1]" . PHP_EOL;
+
+$arr = ['a' => 1, 'b' => 2, 'c' => 3];
+echo "text {$arr['a']} text {$arr['b']} text";
+
